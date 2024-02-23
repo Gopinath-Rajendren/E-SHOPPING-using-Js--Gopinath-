@@ -6,25 +6,27 @@ box-sizing: border-box;
 }
 #output{
     object-fit: contain;
-    height: auto;
-    width: 480px;
+    height: 300px;
+    width: 100%;
     border-radius: 10px;
     background: #ffffff;
 }
 
 #navbar .navbar .navbar-brand{
-    margin: auto;
-    font-size: 30px;
-    font-weight: 600;
+    margin-right: auto;
+    font-size: 25px;
+    font-weight: 400;
     letter-spacing: 9px;
     font-family: "Anta", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
+#brandName{
+    /* margin-right: auto; */
+}
 #navbar img{
-    height: 90px;
-    width: 131px;
-    margin-left: 20px;
+    height: 85px;
+    width: 100px;
 }
 #frontPage .right {
     padding-left: 30px;
@@ -91,4 +93,12 @@ box-sizing: border-box;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
+}
+@media screen and (min-width:320px) and (max-width:700px)  {
+
+    #name{
+        display: none;
+    }
+
+
 }

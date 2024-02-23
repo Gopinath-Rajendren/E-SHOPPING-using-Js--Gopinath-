@@ -8,14 +8,13 @@
     }
 #navbar .navbar .navbar-brand{
     font-size: 25px;
-    margin: auto;
-    font-weight: 600;
+    margin-right: auto;
+    font-weight: 400;
     letter-spacing: 4px;
 }
 #navbar img{
-    height: 90px;
-    width: 131px;
-    margin-left: 20px;
+    height: 85px;
+    width: 100px;
 }
 #navbar .nav-bg{
     background-color: #5989b9!important;
@@ -48,7 +47,7 @@
     font-weight: 800;
 }
 #main .detail .item{
-    font-size: 25px;
+    font-size: 22px;
     color: darkblue;
 }
 #description{
@@ -63,7 +62,7 @@
     line-height: 40px;
 }
 #main .final{
-    font-size: 36px;
+    font-size: 30px;
     color: green;
     font-weight: bold;
     padding-left: 20px;
@@ -75,7 +74,7 @@
     font-weight: 800;
 }
 #rupees1{
-    font-size: 32px;
+    font-size: 28px;
     font-style: italic;
     padding-left: 5px;
     color: green;

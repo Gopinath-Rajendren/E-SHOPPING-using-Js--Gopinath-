@@ -9,14 +9,13 @@
 
 #navbar .navbar .navbar-brand{   
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 4px;
-    margin: auto;
+    margin-right:auto ;
 }
 #navbar img{
-    height: 90px;
-    width: 131px;
-    margin-left: 20px;
+    height: 85px;
+    width: 100px;
 }
 #navbar .nav-bg{
     background-color: #5989b9!important;
@@ -30,7 +29,7 @@
     background-repeat: no-repeat;
     background-size: cover; */
     background-color:  #161616eb;
-    height: 700px;
+    height: 870px;
 }
 #frontPage .detail .data{
     font-family: "Anta", sans-serif;
@@ -42,7 +41,7 @@
 }
 #frontPage .detail label{
     color: yellow;
-    font-size: 20px;
+    font-size: 15px;
 }
 #img_type{
     max-height: 400px;
@@ -69,7 +68,7 @@
     font-size: 16px!important;
 }
 #main .detail .data{
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 500;
     word-spacing: 1px;
     letter-spacing: 1px;

@@ -16,7 +16,7 @@
           <!-- Image and text -->
           <nav class="navbar navbar-light bg-light  nav-bg">
             <img src="./assets/Images/logo.jpeg" alt="#img" >
-                <a class="navbar-brand" href="#">E-SHOPPING</a>
+                <a class="navbar-brand" id="brandName" href="#">E-SHOPPING</a>
                 <a href="" id="name">UserName: Gopinath.R</a>
           </nav>
         </section>
@@ -80,7 +80,6 @@
     </body>
 </html>
 <script>
- 
       var loadFile = function(event) {
         var imgType=event.target.files[0].type;
         var imgTypeSplit=imgType.split('/');
@@ -185,7 +184,7 @@ function addToCart(){
     window.location.href='productInfo.html';
   }
   var productDescription=document.getElementById('product_description').value;
-  var length=12;
+  var length=5;
   var trimmedString = productDescription.substring(0, length)+'...';
   console.log('trimmedString',trimmedString);
   if (productDescription) {
