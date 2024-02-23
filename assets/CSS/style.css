@@ -1,0 +1,94 @@
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+
+}
+#output{
+    object-fit: contain;
+    height: auto;
+    width: 480px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+#navbar .navbar .navbar-brand{
+    margin: auto;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 9px;
+    font-family: "Anta", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+#navbar img{
+    height: 90px;
+    width: 131px;
+    margin-left: 20px;
+}
+#frontPage .right {
+    padding-left: 30px;
+}
+
+#btn{
+    max-width: 100%;
+    margin-top: 30px;
+    color: #ffff09;
+    font-size: 20px;
+    font-weight: 600;
+}
+#btn:hover{
+    max-width: 100%;
+    margin-top: 30px;
+    color: blue;
+    font-size: 20px;
+    font-weight: 600;
+    background: yellow;
+    border-color: yellow;
+}
+#image{
+    color: royalblue;
+    padding-bottom: 70px;
+}
+#navbar .nav-bg{
+    background-color: #5989b9!important;
+    height: 80px;
+}
+.img-name{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+#frontPage {
+    /* background-image: url('../Images/index.avif');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #adc1d6;
+    height: auto;
+}
+#frontPage label{
+    font-family: "Anta", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+#frontPage .form-control{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: darkblue;
+   
+}
+#star{
+    font-size: 25px;
+    color: red;
+    font-weight: 500;
+
+}
+#name{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}

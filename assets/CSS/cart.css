@@ -1,0 +1,108 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Anta", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    }
+#navbar .navbar .navbar-brand{
+    font-size: 25px;
+    margin: auto;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+#navbar img{
+    height: 90px;
+    width: 131px;
+    margin-left: 20px;
+}
+#navbar .nav-bg{
+    background-color: #5989b9!important;
+    height: 80px;
+}
+#main .imgColumn{
+    /* background-color: red; */
+}
+#img_type{
+    max-height: 400px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+}
+#main .container{
+    padding-top: 70px;
+}
+#main .item{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-left: 15px;
+}
+#main .detail .data{
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+#main .detail .item{
+    font-size: 25px;
+    color: darkblue;
+}
+#description{
+    text-transform: capitalize!important;
+    font-size: 16px!important;
+}
+ #main .detail .aa{
+    font-size: 19px;
+    font-weight: 500;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+#main .final{
+    font-size: 36px;
+    color: green;
+    font-weight: bold;
+    padding-left: 20px;
+}
+#rupees{
+    font-size: 20px;
+    padding-left: 10px;
+    color: green;
+    font-weight: 800;
+}
+#rupees1{
+    font-size: 32px;
+    font-style: italic;
+    padding-left: 5px;
+    color: green;
+    font-weight: 800;
+}
+#btn{
+    margin-top: 40px;
+    width: 100%;
+    background: orange;
+    border-color: orange;
+    color: blanchedalmond;
+    letter-spacing: ;
+    font-size: 20px;
+    font-weight: 600;
+}
+#btn:hover{
+    margin-top: 40px;
+    width: 100%;
+    background: blanchedalmond;
+    border-color: orange;
+    color: orange;
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: 800;
+}
+#back{
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+}

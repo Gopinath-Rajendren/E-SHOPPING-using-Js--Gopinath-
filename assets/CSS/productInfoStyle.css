@@ -1,0 +1,147 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Anta", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    }
+
+#navbar .navbar .navbar-brand{   
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: auto;
+}
+#navbar img{
+    height: 90px;
+    width: 131px;
+    margin-left: 20px;
+}
+#navbar .nav-bg{
+    background-color: #5989b9!important;
+    height: 80px;
+}
+#main .imgColumn{
+    /* background-color: red; */
+}
+#frontPage {
+    /* background-image: url('../Images/second.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color:  #161616eb;
+    height: 700px;
+}
+#frontPage .detail .data{
+    font-family: "Anta", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    line-height: 40px;
+   
+}
+#frontPage .detail label{
+    color: yellow;
+    font-size: 20px;
+}
+#img_type{
+    max-height: 400px;
+    height: 100%;
+    color: grey;
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+    background: none;
+}
+#main .container{
+    padding-top: 70px;
+}
+#main .item{
+    font-size: 18px;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-left: 15px;
+}
+#description{
+    text-transform: capitalize!important;
+    font-size: 16px!important;
+}
+#main .detail .data{
+    font-size: 19px;
+    font-weight: 500;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    padding-left: 50px;
+}
+#main .detail .button0{
+    background: rgb(35, 170, 35);
+    height: 31px;
+    width: 31px;
+    border-radius: 10px;
+    color: yellow;
+    font-weight: 700;
+
+}
+#main .detail .button0:hover{
+    background: white;
+    border-color: white;
+    height: 31px;
+    width: 31px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+
+}
+#main .detail .button1{
+    background: red;
+    height: 31px;
+    width: 31px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+
+}
+#main .detail .button1:hover{
+    background: white;
+    border-color: white;
+    height: 31px;
+    width: 31px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+
+}
+#main .detail .btn1{
+    background: none;
+    height: 31px;
+    width: 151px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    border-color: #2b3137fa;
+}
+#btn{
+    margin-top: 41px;
+    width: 80%;
+    background: none;
+    color: cyan;
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+#btn:hover{
+    margin-top: 41px;
+    width: 80%;
+    background: blue;
+    border-color: blue;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+#back{
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+}
