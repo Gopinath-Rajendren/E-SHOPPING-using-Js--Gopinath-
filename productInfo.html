@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>E-shopping_InfoPage</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./assets/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+       <link rel="stylesheet" href="./assets/CSS/productInfoStyle.css">
+       <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kanit:ital,wght@0,300;1,200&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <section id="main">
+            <section id="navbar">
+                <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+                    <a href="./index.html" id="back">Back</a>
+                    <img src="./assets/Images/logo.jpeg" alt="#img" >
+                    <a class="navbar-brand" href="#">PRODUCT INFO</a>
+                   
+                  </nav>
+            </section>
+            <section id="frontPage">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 imgColumn">
+                        <img src="" alt="couldn't load your image" id="img_type" class="d-flex">  
+                    </div>
+                    <div class="col-xl-6 col-lg-6 detail"> 
+                        <div><span class="data">Product Name:</span><label id="name" class="item"></label></div>
+                        <div><span class="data">Product Description:</span> <label id="description" class="item descript" ></label></div>
+                        <div><span class="data">Original Price Of Your Product:</span><label id="originalPrice"  class="item"></label></div>
+                        <div><span class="data">Your Savings:</span><label id="disountamount" class="item" ></label></div> 
+                        <div><span class="data">Product Count:</span><label id="count" class="item"></label></div>
+
+                        <div>
+                            <label  class="data">Add Item:</label>
+                            <button class="button1" onclick="decrement()">-</button>
+                            <button class="btn1" id="cc" >1</button>
+                            <button class="button0" onclick="increment()">+</button>
+                        </div>
+                        <!-- <div><span class="data">Final Price Of Your Product:</span><label id="salesPrice" class="item" ></label></div>  -->
+
+                        <button type="button" id="btn" class="btn btn-primary btn-lg btn-block" onclick="addToCart()">Add Product</button>    
+                    </div>
+                       </div>
+                </div>
+            </section>
+            </div>
+        </section>
+    
+    <script src="./assets/bootstrap-4.6.2-dist/css/jquery.slim.min.js"></script>
+    <script src="./assets/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+<script>
+    var productName=localStorage.getItem('productName');  
+    var viewName=document.getElementById('name').innerHTML=productName;
+    var description=localStorage.getItem('productDescription');  
+    var viewDescription=document.getElementById('description').innerHTML=description;
+    var originalPrice=localStorage.getItem('originalPrice');  
+    var viewOriginalPrice=document.getElementById('originalPrice').innerHTML=originalPrice;
+    if (viewOriginalPrice) {
+        var finalamount=viewOriginalPrice*productCountValue;
+        // document.getElementById('salesPrice').value=finalamount;
+    }
+    var sp=localStorage.getItem('discountAmount');  
+    var viewSalesPrice=document.getElementById('disountamount').innerHTML=sp;
+    
+    // var discountValue=localStorage.getItem('savePrice');
+    // var viewDiscountValue=document.getElementById('disountamount').innerHTML=discountValue;
+    var productCountValue=localStorage.getItem('productCountValue');
+    var viewProductCount=document.getElementById('count').innerHTML=productCountValue; 
+    // var ss=localStorage.getItem('string');
+    // var viewString=document.getElementById('description').innerHTML=ss;
+    console.log(viewProductCount);
+     var  value=1;
+     function increment(){
+        if (value<viewProductCount) {
+            value++;
+           var bbb= document.getElementById('cc').innerHTML=value;
+        }
+
+     }
+     function decrement(){
+        if(value>1){
+            value--;
+            var aaa=document.getElementById('cc').innerHTML=value;
+        }
+     }
+   
+   
+    window.onload = function() {
+    var imageData = localStorage.getItem("previewImage");
+    if (imageData) {
+        document.getElementById("img_type").src = imageData;
+    }
+}
+function addToCart(){
+    // var countNumber=document.getElementById('cc').value;
+    // if (countNumber) {
+    // localStorage.setItem('countNumber',countNumber);
+    // window.location.href='cart.html';
+    // }
+    // console.log('countNumber',countNumber);
+
+    var finalPrice=document.getElementById('disountamount').value;
+    localStorage.setItem('finalPrice',finalPrice);
+    var go=document.getElementById('cc').innerHTML;
+    localStorage.setItem('countNumber',go);
+    window.location.href='cart.html';
+    
+    
+    
+   
+
+}
+</script>

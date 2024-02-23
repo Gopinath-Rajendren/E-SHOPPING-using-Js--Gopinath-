@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>E-shopping_InfoPage</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./assets/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+       <link rel="stylesheet" href="./assets/CSS/cart.css">
+       <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kanit:ital,wght@0,300;1,200&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <section id="main">
+            <section id="navbar">
+                <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+                    <a href="./productInfo.html" id="back">Back</a>
+                    <img src="./assets/Images/logo.jpeg" alt="#img" >
+                    <a class="navbar-brand" href="#">Your Cart</a>
+                  </nav>
+            </section>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 imgColumn">
+                        <img src="" alt="couldn't load your image" id="img_type" class="d-flex">  
+                    </div>
+                    <div class="col-xl-6 col-lg-6 detail"> 
+                        <div ><span class="data">Product Name:</span><label id="name" class="item"></label></div>
+                        <!-- <div><span class="data">Product Description:</span> <label id="description" class="item descript" ></label></div> -->
+                        <div><span class="data">Original Price:</span><label id="originalPrice"  class="item"></label></div>
+                        <div><span class="data">Save:</span><label id="discountAmount" class="item" ></label><span id="rupees">₹</span></div> 
+                        <div><span class="data">Your Selected Items:</span><label id="pItems" class="item" ></label></div>
+                        <div><span class="data">Each Product price:</span><label id="salesPrice" class="item"></label></div>
+                        <div><span class="data">Final Price Of Your Product:</span><label id="finalprice" class="final "></label><span id="rupees1">₹</span></div>
+                        <!-- <button type="button" id="btn" class="btn btn-primary btn-lg btn-block" onclick="addToCart()">Click To Place Your Order</button>     -->
+                        <a href="./process.html" id="btn" class="btn btn-primary btn-lg btn-block" >Click To Place Your Order</a>
+                       </div>
+                </div>
+            </div>
+        </section>
+    
+    <script src="./assets/bootstrap-4.6.2-dist/css/jquery.slim.min.js"></script>
+    <script src="./assets/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+<script>
+    var productName=localStorage.getItem('productName');  
+    var viewName=document.getElementById('name').innerHTML=productName;
+    // var description=localStorage.getItem('productDescription');  
+    // var viewDescription=document.getElementById('description').innerHTML=description;
+    var originalPrice=localStorage.getItem('originalPrice');  
+    var viewOriginalPrice=document.getElementById('originalPrice').innerHTML=originalPrice;
+    var productItems=localStorage.getItem('countNumber');
+    var viewProductItems=document.getElementById('pItems').innerHTML=productItems;
+   
+    var salesPrice=localStorage.getItem('salesPricevalue');  
+    var viewSalesPrice=document.getElementById('salesPrice').innerHTML=salesPrice;
+     var ff=salesPrice*productItems;
+     var hh=document.getElementById('finalprice').innerHTML=ff;
+
+    
+
+
+    var discountValue=localStorage.getItem('discountAmount');
+    var viewDiscountValue=document.getElementById('discountAmount').innerHTML=discountValue;
+    window.onload = function() {
+    var imageData = localStorage.getItem("previewImage");
+    if (imageData) {
+        document.getElementById("img_type").src = imageData;
+    }
+}
+
+</script>

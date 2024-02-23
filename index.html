@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <title>E_Shopping</title>
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./assets/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+       <link rel="stylesheet" href="./assets/CSS/style.css">
+       <link href="https://fonts.googleapis.com/css2?family=Anta&family=Kanit:ital,wght@0,300;1,200&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <section id="navbar">
+          <!-- Image and text -->
+          <nav class="navbar navbar-light bg-light  nav-bg">
+            <img src="./assets/Images/logo.jpeg" alt="#img" >
+                <a class="navbar-brand" href="#">E-SHOPPING</a>
+                <a href="" id="name">UserName: Gopinath.R</a>
+          </nav>
+        </section>
+        <section id="frontPage" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 col-xl-6 col-sm-12 left">
+                        <label class="img-name">Select Your Image<span id="star">*</span></label>
+                        <input type="file" id="image" onchange=" loadFile(event)">
+                        <img id="output" src="" alt="please select your image for preview or couldn't load your image">                      
+                    </div>   
+                    <div class="col-md-12 col-lg-6 col-xl-6 col-sm-12 right" >
+                        <form>
+                            <div class="form-group" > 
+                              <label>Name<span id="star">*</span></label>
+                              <input type="text" class="form-control" id="product_name">
+                              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                            </div> 
+                            <div class="form-group">
+                                <label >Description<span id="star">*</span></label>
+                                <textarea class="form-control" id="product_description"  rows="3" onchange="fontLimit(event)"></textarea>
+                              </div>
+                              <div class="form-group">
+                                <label >Original Price<span id="star">*</span></label>
+                                <input type="number" class="form-control" id="originalPriceId" >
+                              </div>  
+                              <!-- <div class="form-group">
+                                <label for="exampleInputEmail1">Discount</label>
+                                <input type="number" class="form-control" id="product_discount" aria-describedby="emailHelp">
+                              </div>   -->
+                              <div class="form-group">
+                                <label>Discount-Format<span id="star">*</span></label>
+                                <select id="discount" onchange="discountInput(event)">
+                                  <option value="">select Discount Type</option>
+                                  <option value="percentage">Percentage</option>
+                                  <option value="flat">Flat</option>
+                                </select>
+                                <input type="number"  style="display: none;" class="form-control" id="percentageId" onchange="percentageInput(event)"/>
+                                <input type="number" style="display: none;" class="form-control" id="flatId"  onchange="FlatInput(event)"/>
+                              </div>
+                              <div class="form-group">
+                                <label>Sales Price</label>
+                                <input type="number" class="form-control" id="product_salesPrice" readonly>
+                              </div>  
+                              <div class="form-group">
+                                <label>Discount Amount</label>
+                                <input type="number" class="form-control" id="product_discountValue" readonly>
+                              </div>  
+                              <div class="form-group">
+                                <label>Maximum Quantity<span id="star">*</span></label>
+                                <input type="number" class="form-control" id="product_quantity" >
+                              </div>     
+                              <button type="button" id="btn" class="btn btn-primary btn-lg btn-block" onclick="addToCart()">Add Product</button>                         
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <script src="./assets/bootstrap-4.6.2-dist/css/jquery.slim.min.js"></script>
+    <script src="./assets/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+<script>
+ 
+      var loadFile = function(event) {
+        var imgType=event.target.files[0].type;
+        var imgTypeSplit=imgType.split('/');
+        console.log('-----imgTypeSplit-----',imgTypeSplit);
+        var imgExt=imgTypeSplit[1];
+        console.log('imgExt',imgExt);
+        if(imgExt=='jpg'|| imgExt=='png'||imgExt=='jpeg'){
+            var reader = new FileReader();
+            reader.onload = function(){
+            var output = document.getElementById('output');
+            output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }else{
+            alert('upload valid file format as a jpg,jpeg,png,');
+        } 
+        var reader = new FileReader();
+        reader.onload = function(){
+        var output = document.getElementById('output');
+        output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);   
+}
+  function addProduct(){
+    var additem=document.getElementById('product_name').value;
+    if(additem){
+      localStorage.setItem('product',additem);
+      window.location.href='productInfo.html';
+    }
+    console.log(additem);
+}
+  function discountInput(event){
+  var aa=event.target.value;
+  console.log('discountButton',aa);
+  if (aa=='percentage'){
+    document.getElementById('percentageId').style="display:block;";
+    document.getElementById('flatId').style="display:none;";
+  }else{
+    document.getElementById('percentageId').style="display:none;";
+  }
+  if (aa=='flat'){
+    document.getElementById('flatId').style="display:block;";
+    document.getElementById('percentageId').style="display:none;";
+  }else{
+    document.getElementById('flatId').style="display:none;";
+  }
+}
+
+  function percentageInput(event){
+  var percentageValue=document.getElementById('percentageId').value;
+  var originalPriceValue=document.getElementById('originalPriceId').value;
+  console.log('percentageValue',percentageValue);
+  console.log('originalPriceValue',originalPriceValue);
+    if (percentageValue) {
+      var percentageCalc=originalPriceValue * ( percentageValue / 100 );
+      var percentageFinal=originalPriceValue-percentageCalc;
+      
+      if (percentageFinal) {
+        var savecalc=originalPriceValue-percentageFinal;
+        document.getElementById('product_discountValue').value=savecalc;
+      } 
+    }
+    document.getElementById('product_salesPrice').value=percentageFinal;
+    console.log('product_salesPrice',product_salesPrice);
+
+  console.log('percentageCalc',percentageCalc);
+
+
+  console.log('percentageinputarea');
+//  var saveAmount=document.getElementById('product_discountValue').value;
+//  if (saveAmount) {
+//   savecalc=originalPriceValue-
+//  }
+}
+function FlatInput(event){
+
+  var flatValue=document.getElementById('flatId').value;
+  var originalPriceValue=document.getElementById('originalPriceId').value;
+  if(flatValue){
+    var flatCalc=originalPriceValue-flatValue;
+    if (flatCalc) {
+        var savecalc=originalPriceValue-flatCalc;
+        document.getElementById('product_discountValue').value=savecalc;
+      }
+  }
+  console.log('flatclac',flatCalc);
+  document.getElementById('product_salesPrice').value=flatCalc;
+  console.log('flatinputarea');
+}
+function addToCart(){
+  //  function fontLimit(event){
+  //   var limit=document.getElementById('product_description').value;
+  //   var length=8;
+    
+   
+  // }
+  //  localStorage.setItem('string',trimmedString);
+  //   window.location.href='productInfo.html';
+  var productName=document.getElementById('product_name').value;
+  if (productName) {
+    localStorage.setItem('productName',productName);
+    window.location.href='productInfo.html';
+  }
+  var productDescription=document.getElementById('product_description').value;
+  var length=12;
+  var trimmedString = productDescription.substring(0, length)+'...';
+  console.log('trimmedString',trimmedString);
+  if (productDescription) {
+    localStorage.setItem('productDescription',trimmedString);
+    window.location.href='productInfo.html';
+  }
+  var originalPrice=document.getElementById('originalPriceId').value;
+  if (originalPrice) {
+    localStorage.setItem('originalPrice',originalPrice);
+    window.location.href='productInfo.html';
+  }
+  var salesPricevalue=document.getElementById('product_salesPrice').value;
+  if (salesPricevalue) {
+    localStorage.setItem('salesPricevalue',salesPricevalue);
+    window.location.href='productInfo.html';
+  } 
+  var discountAmount=document.getElementById('product_discountValue').value;
+  if (discountAmount) {
+    localStorage.setItem('discountAmount',discountAmount);
+    window.location.href='productInfo.html';
+  }
+  var productCountValue=document.getElementById('product_quantity').value;
+  if (productCountValue){
+      localStorage.setItem('productCountValue',productCountValue);
+      window.location.href='productInfo.html';
+  }
+  var fileInput = document.getElementById("image");
+        var vv=fileInput.files.length > 0;
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var imageData = event.target.result;
+            localStorage.setItem("previewImage", imageData);
+        };
+        reader.readAsDataURL(file);
+}
+
+</script>
