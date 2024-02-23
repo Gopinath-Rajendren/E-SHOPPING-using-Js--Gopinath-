@@ -21,9 +21,6 @@ box-sizing: border-box;
     font-weight: 300;
     font-style: normal;
 }
-#brandName{
-    /* margin-right: auto; */
-}
 #navbar img{
     height: 85px;
     width: 90px;
@@ -60,10 +57,7 @@ box-sizing: border-box;
     margin-bottom: 20px;
 }
 #frontPage {
-    /* background-image: url('../Images/index.avif');
-    background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: #adc1d6;
+     background-color: #adc1d6;
     height: auto;
 }
 #frontPage label{

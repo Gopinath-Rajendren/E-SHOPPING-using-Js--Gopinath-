@@ -20,9 +20,6 @@
     background-color: #5989b9!important;
     height: 80px;
 }
-#main .imgColumn{
-    /* background-color: red; */
-}
 #img_type{
     max-height: 400px;
     height: 100%;
@@ -109,10 +106,32 @@
     #navbar img{
         display: none;
     }
+    #main .detail .data{
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
     #navbar .navbar .navbar-brand{   
         font-size: 25px;
         font-weight: 400;
         letter-spacing: 4px;
         margin:auto ;
+    }
+    #main .detail .item{
+        font-size: 16px;
+        color: darkblue;
+    }
+    #main .final{
+        font-size: 23px;
+        color: green;
+        font-weight: bold;
+        padding-left: 20px;
+    }
+    #rupees1{
+        font-size: 22px;
+        font-style: italic;
+        color: green;
+        font-weight: 600;
     }
 }

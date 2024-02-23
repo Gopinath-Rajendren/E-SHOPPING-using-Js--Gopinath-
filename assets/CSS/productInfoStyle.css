@@ -122,7 +122,7 @@
 }
 #btn{
     margin-top: 41px;
-    width: 80%;
+    width: 100%;
     background: none;
     color: cyan;
     letter-spacing: 5px;
@@ -131,7 +131,7 @@
 }
 #btn:hover{
     margin-top: 41px;
-    width: 80%;
+    width: 100%;
     background: blue;
     border-color: blue;
     color: white;
