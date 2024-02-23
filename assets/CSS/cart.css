@@ -42,12 +42,12 @@
 }
 #main .detail .data{
     font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 2px;
+    line-height: 30px;
+    letter-spacing: 1px;
     font-weight: 800;
 }
 #main .detail .item{
-    font-size: 22px;
+    font-size: 20px;
     color: darkblue;
 }
 #description{
@@ -86,7 +86,6 @@
     background: orange;
     border-color: orange;
     color: blanchedalmond;
-    letter-spacing: ;
     font-size: 20px;
     font-weight: 600;
 }
@@ -104,4 +103,16 @@
     font-size: 20px;
     color: black;
     text-decoration: underline;
+}
+
+@media screen and (min-width:300px) and (max-width:700px){
+    #navbar img{
+        display: none;
+    }
+    #navbar .navbar .navbar-brand{   
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        margin:auto ;
+    }
 }
